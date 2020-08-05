@@ -30,84 +30,282 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container {
+.form-items {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.range-labels {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-labels li {
+  display: inline;
+}
+
 </style>
 </head>
 <body>
 
 <h3>Contact Form</h3>
 
-<div class="container">
+<div class="form-items">
+
   <form action="/action_page.php">
-    <h3>My Targets</h3>
-    <h4>Score from 1-5 (5 means you acted on your urge)</h4>
-    <label for="target1">Target 1</label>
-    <input type="text" id="fname" name="target1" placeholder="Your first target...">
-    
-    <div>
-    <h4>Urge1</h4>
-   <input type="range" min="1" max="5" value="5" class="slider" id="myRange">
-    </div>
-    
-    <label for="target2">Target 2</label>
-    <input type="text" id="fname" name="target1" placeholder="Your second target...">
-    
-    <div>
-    <h4>Urge2</h4>
-   <input type="range" min="1" max="5" value="5" class="slider" id="myRange">
-    </div>
-     
-     <label for="target3">Target 3</label>
-    <input type="text" id="fname" name="target1" placeholder="Your third target...">
-    
-    <div>
-    <h4>Urge3</h4>
-   <input type="range" min="1" max="5" value="5" class="slider" id="myRange">
+
+    <div class="section">
+
+      <h3>My Targets</h3>
+
+      <h4>Score from 1-5 (5 means you acted on your urge)</h4>
+
+      <div class="form-item">
+
+        <label for="target1">Target 1</label>
+        <input type="text" id="fname" name="target1" placeholder="Your first target...">
+
+      </div>
+      
+      <div class="form-item">
+
+        <div class="slider">
+
+          <label for="urge1">Urge 1</label>
+          <input type="range" min="1" max="5" value="5" class="slider" name="urge1" id="Urge1">
+
+          <ul class="range-labels">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="form-item">
+      
+        <label for="target2">Target 2</label>
+        <input type="text" id="fname" name="target1" placeholder="Your second target...">
+
+      </div>
+      
+      <div class="form-item">
+
+          <div class="slider">
+
+            <label for="urge2">Urge 2</label>
+            <input type="range" min="1" max="5" value="5" name="urge2" class="slider" id="Urge2">
+
+            <ul class="range-labels">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+
+        </div>
+
+      </div>
+
+      <div class="form-item">
+       
+        <label for="target3">Target 3</label>
+        <input type="text" id="fname" name="target1" placeholder="Your third target...">
+
+      </div>
+      
+      <div class="form-item">
+
+          <div class="slider">
+
+            <label for="urge3">Urge 3</label>
+            <input type="range" min="1" max="5" value="5" name="urge3" class="slider" id="Urge3">
+
+            <ul class="range-labels">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+
+          </div>
+
+      </div>
+
     </div>
 
-</div>
-<div class="container">
-	<h3>My Experiences</h3>
-    <h4>Score from 1-5</h4>
-     <div>
-    <h4>Anxiety</h4>
-   <input type="range" min="1" max="5" value="5" class="slider" id="myRange">
-      </div> <div>
-    <h4>Shame</h4>
-   <input type="range" min="1" max="5" value="5" class="slider" id="myRange">
-    </div> <div>
-    <h4>Joy</h4>
-   <input type="range" min="1" max="5" value="5" class="slider" id="myRange">
-    </div> <div>
-    <h4>Sadness</h4>
-   <input type="range" min="1" max="5" value="5" class="slider" id="myRange">
-    </div> <div>
-    <h4>Anger</h4>
-   <input type="range" min="1" max="5" value="5" class="slider" id="myRange">
-    </div> <div>
-    <h4>Pain</h4>
-   <input type="range" min="1" max="5" value="5" class="slider" id="myRange">
-    </div>
-    </div>
-	<div class="container">
-    <h3>Building a life worth living</h3>
-    <label for="skills">Skills I Used</label>
-    <input type="text" id="skills" name="skills" placeholder="Enter skills here...">
-        <label for="skills">Things I did</label>
-    <input type="text" id="skills" name="skills" placeholder="Enter things here...">
-    </div>
-    	<div class="container">
+    <div class="section">
+
+  	  <h3>My Experiences</h3>
+
+      <h4>Score from 1-5</h4>
+
+      <div class="form-item">
+
+          <div class="slider">
+
+            <label for="anxiety">Anxiety</label>
+            <input type="range" min="1" max="5" value="5" name="anxiety" class="slider" id="Anxiety">
+
+            <ul class="range-labels">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="form-item">
+
+          <div class="slider">
+
+            <label for="shame">Shame</label>
+            <input type="range" min="1" max="5" value="5" class="slider" name="shame" id="Shame">
+
+            <ul class="range-labels">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="form-item">
+
+          <div class="slider">
+
+            <label for="joy">Joy</label>
+            <input type="range" min="1" max="5" value="5" name="joy" class="slider" id="Joy">
+
+            <ul class="range-labels">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="form-item">
+
+          <div class="slider">
+
+            <label for="sadness">Sadness</label>
+            <input type="range" min="1" max="5" value="5" name="sadness" class="slider" id="Sadness">
+
+            <ul class="range-labels">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="form-item">
+
+          <div class="slider">
+
+            <label for="anger">Anger</label>
+            <input type="range" min="1" max="5" value="5" class="slider" name="anger" id="Anger">
+
+            <ul class="range-labels">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div clas="form-item">
+
+          <div class="slider">
+
+            <label for="pain">Pain</label>
+            <input type="range" min="1" max="5" value="5" name="pain" class="slider" id="Pain">
+
+            <ul class="range-labels">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    	<div class="section">
+
+        <h3>Building a life worth living</h3>
+
+        <div class="form-item">
+
+          <label for="skills">Skills I Used</label>
+          <input type="text" id="skills" name="skills" placeholder="Enter skills here...">
+
+        </div>
+
+        <div class="form-item">
+
+          <label for="skills">Things I did</label>
+          <input type="text" id="skills" name="skills" placeholder="Enter things here...">
+
+        </div>
+
+      </div>
+
+      <div class="form-item">
+
         <label for="skills">Things I want to talk about in therapy</label>
-    <input type="text" id="skills" name="skills" placeholder="Enter things here...">
-    </div>
-    <div class="container">
-    <input type="submit" value="Submit">
+        <input type="text" id="skills" name="skills" placeholder="Enter things here...">
+
+      </div>
+
+      <div class="form-item">
+
+        <input type="submit" value="Submit">
+
+      </div>
+
   </form>
+
 </div>
 
 </body>
+
 </html>
