@@ -7,27 +7,27 @@
 <body>
 
   <div id="login_div" class="main-div">
-    <h3>Diary Submissions</h3>
+    <h1>Diary Submissions</h1>
+    <p></p>
+    <img src="loginimage.png" alt="Login Image" class="homeimage">
+    <p></p>
     <button onclick="login()">Login to Account</button>
   </div>
 
   <div id="user_div" class="loggedin-div">
-    <h3>Welcome User</h3>
-    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <h1 id="user_para">Welcome to Firebase web login Example. You're currently logged in.</h1>
     <div class="form-items">
 
-      <form action="/action_page.php">
-    
         <div class="section">
     
-          <h3>My Targets</h3>
+          <h2>My Targets</h2>
     
           <h4>Score from 1-5 (5 means you acted on your urge)</h4>
     
           <div class="form-item">
     
             <label for="target1">Target 1</label>
-            <input type="text" id="fname" name="target1" placeholder="Your first target...">
+            <input type="text" id="target1" name="target1" placeholder="Your first target...">
     
           </div>
           
@@ -36,15 +36,10 @@
             <div class="slider">
     
               <label for="urge1">Urge 1</label>
-              <input type="range" min="1" max="5" value="3" class="slider" name="urge1" id="Urge1">
-    
-              <ul class="range-labels">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-              </ul>
+              <div class="range-slider">
+                <input class="range-slider__range" type="range" value="3" min="0" max="5">
+                <span class="range-slider__value">0</span>
+              </div>
     
             </div>
     
@@ -53,7 +48,7 @@
           <div class="form-item">
           
             <label for="target2">Target 2</label>
-            <input type="text" id="fname" name="target1" placeholder="Your second target...">
+            <input type="text" id="target2" name="target2" placeholder="Your second target...">
     
           </div>
           
@@ -61,16 +56,10 @@
     
               <div class="slider">
     
-                <label for="urge2">Urge 2</label>
-                <input type="range" min="1" max="5" value="3" name="urge2" class="slider" id="Urge2">
-    
-                <ul class="range-labels">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
+                <div class="range-slider">
+                  <input class="range-slider__range" type="range" value="3" min="0" max="5">
+                  <span class="range-slider__value">0</span>
+                </div>
     
             </div>
     
@@ -79,7 +68,7 @@
           <div class="form-item">
            
             <label for="target3">Target 3</label>
-            <input type="text" id="fname" name="target1" placeholder="Your third target...">
+            <input type="text" id="target3" name="target3" placeholder="Your third target...">
     
           </div>
           
@@ -87,16 +76,10 @@
     
               <div class="slider">
     
-                <label for="urge3">Urge 3</label>
-                <input type="range" min="1" max="5" value="3" name="urge3" class="slider" id="Urge3">
-    
-                <ul class="range-labels">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
+                <div class="range-slider">
+                  <input class="range-slider__range" type="range" value="3" min="0" max="5">
+                  <span class="range-slider__value">0</span>
+                </div>
     
               </div>
     
@@ -113,17 +96,11 @@
           <div class="form-item">
     
               <div class="slider">
-    
-                <label for="anxiety">Anxiety</label>
-                <input type="range" min="1" max="5" value="3" name="anxiety" class="slider" id="Anxiety">
-    
-                <ul class="range-labels">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
+                <label for="Anxiety" id="Anxiety">Anxiety</label>
+                <div class="range-slider">
+                  <input class="range-slider__range" type="range" value="3" min="0" max="5">
+                  <span class="range-slider__value">0</span>
+                </div>
     
               </div>
     
@@ -133,17 +110,25 @@
     
               <div class="slider">
     
-                <label for="shame">Shame</label>
-                <input type="range" min="1" max="5" value="3" class="slider" name="shame" id="Shame">
+                <div class="slider">
+                  <label for="Shame" id="Shame">Shame</label>
+                  <div class="range-slider">
+                    <input class="range-slider__range" type="range" value="3" min="0" max="5">
+                    <span class="range-slider__value">0</span>
+                  </div>
+              </div>
     
-                <ul class="range-labels">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
+            </div>
     
+            <div class="form-item">
+    
+              <div class="slider">
+                <div class="slider">
+                  <label for="Anxiety" id="Anxiety">Anxiety</label>
+                  <div class="range-slider">
+                    <input class="range-slider__range" type="range" value="3" min="0" max="5">
+                    <span class="range-slider__value">0</span>
+                  </div>
               </div>
     
             </div>
@@ -152,17 +137,12 @@
     
               <div class="slider">
     
-                <label for="joy">Joy</label>
-                <input type="range" min="1" max="5" value="3" name="joy" class="slider" id="Joy">
-    
-                <ul class="range-labels">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
-    
+                <div class="slider">
+                  <label for="Joy" id="Joy">Joy</label>
+                  <div class="range-slider">
+                    <input class="range-slider__range" type="range" value="3" min="0" max="5">
+                    <span class="range-slider__value">0</span>
+                  </div>
               </div>
     
             </div>
@@ -170,36 +150,11 @@
             <div class="form-item">
     
               <div class="slider">
-    
-                <label for="sadness">Sadness</label>
-                <input type="range" min="1" max="5" value="3" name="sadness" class="slider" id="Sadness">
-    
-                <ul class="range-labels">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
-    
-              </div>
-    
-            </div>
-    
-            <div class="form-item">
-    
-              <div class="slider">
-    
-                <label for="anger">Anger</label>
-                <input type="range" min="1" max="5" value="3" class="slider" name="anger" id="Anger">
-    
-                <ul class="range-labels">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
+                <label for="Anger" id="Anger">Anger</label>
+                <div class="range-slider">
+                  <input class="range-slider__range" type="range" value="3" min="0" max="5">
+                  <span class="range-slider__value">0</span>
+                </div>
     
               </div>
     
@@ -209,17 +164,12 @@
     
               <div class="slider">
     
-                <label for="pain">Pain</label>
-                <input type="range" min="1" max="5" value="3" name="pain" class="slider" id="Pain">
-    
-                <ul class="range-labels">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
-    
+                <div class="slider">
+                  <label for="Pain" id="Pain">Pain</label>
+                  <div class="range-slider">
+                    <input class="range-slider__range" type="range" value="3" min="0" max="5">
+                    <span class="range-slider__value">0</span>
+                  </div>
               </div>
     
             </div>
@@ -239,8 +189,8 @@
     
             <div class="form-item">
     
-              <label for="skills">Things I did</label>
-              <input type="text" id="skills" name="skills" placeholder="Enter things here...">
+              <label for="things">Things I did</label>
+              <input type="text" id="things" name="things" placeholder="Enter things here...">
     
             </div>
     
@@ -248,14 +198,12 @@
     
           <div class="form-item">
     
-            <label for="skills">Things I want to talk about in therapy</label>
-            <input type="text" id="skills" name="skills" placeholder="Enter things here...">
+            <label for="therapy">Things I want to talk about in therapy</label>
+            <input type="text" id="therapy" name="therapy" placeholder="Enter things here...">
     
           </div>
     
-          <button onclick="logout()">Logout</button>
-    
-      </form>
+          <button onclick="submit()">Submit</button>
     
     </div>
 
