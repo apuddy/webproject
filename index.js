@@ -5,7 +5,6 @@ var token = ""
 function login() {
 
   firebase.auth().signInWithPopup(provider).then(function (result) {
-    console.log("starting...")
     // This gives you a Google Access Token. You can use it to access the Google API.
     token = result.credential.accessToken;
     // The signed-in user info.
@@ -14,16 +13,13 @@ function login() {
     if (user) {
       // User is signed in.
       document.getElementById("login_div").style.display = "none";
-      {
-        document.getElementById("user_para").innerHTML = "Welcome " + user.displayName;
-        document.getElementById("user_div").style.display = "block";
-      }
+      document.getElementById("user_para").innerHTML = "Welcome " + user.displayName;
+      document.getElementById("user_div").style.display = "block";
     } else {
       // No user is signed in.
       document.getElementById("login_div").style.display = "block";
 
     }
-    console.log(user)
   }).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -35,19 +31,14 @@ function login() {
     console.log("error" + errorMessage)
     // ...
   });
-  console.log("finished...")
 
 }
 
 function logout() {
   firebase.auth().signOut().then(function () {
-    {
-      // User is signed in.
-      document.getElementById("login_div").style.display = "block";
-      {
-        document.getElementById("user_div").style.display = "none";
-      }
-    }
+    // User is signed in.
+    document.getElementById("login_div").style.display = "block";
+    document.getElementById("user_div").style.display = "none";
     // Sign-out successful.
   }).catch(function (error) {
     // An error happened.
@@ -137,26 +128,18 @@ function submit() {
 }
 
 
-var rangeSlider = function(){
-  var sliders = document.getElementsByClassName("range-slider"),
-      ranges = document.getElementsByClassName("range-slider__range"),
-      values = document.getElementsByClassName("range-slider__value");
-    
-  Array.from(sliders).forEach(function(slider){
+var rangeSlider = function () {
+  let sliders = document.getElementsByClassName("range-slider");
 
-    Array.from(values).forEach(function(value){
-      var v = slider.childNodes[1].getAttribute('value');
-      value.innerHTML = v ;
-      console.log(v);
-      console.log(slider.childNodes);
-    });
+  Array.from(sliders).forEach(function (slider) {
+    let range = slider.querySelector("input");
+    let value = slider.querySelector("span");
 
-    Array.from(ranges).forEach(function(range){
-      range.addEventListener('change', function(){
-      slider.childNodes[3].innerHTML = range.value;
-      console.log(range.value);
-    });
-  });
+    // Set initial value in the span to the input's default value
+    value.innerHTML = range.value;
+
+    // Add onChange event listener to each input, to update span
+    range.addEventListener("change", e => value.innerHTML = e.target.value);
   });
 };
 
