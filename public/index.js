@@ -95,16 +95,13 @@ function submit() {
                 "stringValue": document.getElementById('Pain').value
               } }
               ,{ "userEnteredValue": { 
-                "stringValue": document.getElementById('Pain').value
-              } }
-              ,{ "userEnteredValue": { 
                 "stringValue": document.getElementById('skills').value
               } }
               ,{ "userEnteredValue": { 
                 "stringValue": document.getElementById('things').value
               } },
               { "userEnteredValue": { 
-                "stringValue": document.getElementById('things').value
+                "stringValue": document.getElementById('therapy').value
               } }
             ]
           }], "fields": "*"

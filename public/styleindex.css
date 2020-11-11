@@ -98,18 +98,40 @@ padding:10px
 }
 
 @media only screen and (max-width: 480px) {
-  .main-div{
+  .main-div {
     width: 20%;
     margin: 0px auto;
-    margin-top: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 20px;
     display:block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 25px;
     background-color: #fff;
-    min-width: 60%;
+    min-width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     
   }
+}
+
+@media only screen and (max-width: 480px) {
+  .loggedin-div{
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display:none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    background-color: #fff;
+    min-width: 75%;  
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+  }
+
 }
 
 input[type=text]{
